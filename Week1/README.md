@@ -34,7 +34,7 @@ PS:递归调用函数空间复杂度不仅仅看代码中是否创建了空间�
 空间复杂度O(1)
 
 
-[两数之和](../src/main/java/week1/toSum/Solution.java)
+[两数之和](../src/main/java/week1/twoSum/Solution.java)
 时间复杂度O(n)
 空间复杂度O(n)
 PS:空间复杂度为O(n)主要是创建了一个哈希表
