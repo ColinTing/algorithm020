@@ -47,6 +47,10 @@ PS:空间复杂度为O(n)主要是创建了一个哈希表
 时间复杂度O(n)
 空间复杂度O(n)
 
-[爬楼梯](../src/main/java/week1/climbStairs/Solution.java)
+[爬楼梯(递归+缓存)](../src/main/java/week1/climbStairs/Solution.java)
 时间复杂度O(n)
 空间复杂度O(n)
+
+[爬楼梯(动态规划)](../src/main/java/week1/climbStairs/Solution1.java)
+时间复杂度O(n)
+空间复杂度O(1)
