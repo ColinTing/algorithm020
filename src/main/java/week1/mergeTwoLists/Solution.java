@@ -1,7 +1,7 @@
 package week1.mergeTwoLists;
 
 
-
+import utils.ListNode;
 
 /**
  * @program: algorithm020

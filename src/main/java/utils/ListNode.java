@@ -1,4 +1,4 @@
-package week1.mergeTwoLists;
+package utils;
 
 /**
  * @program: algorithm020
@@ -7,8 +7,8 @@ package week1.mergeTwoLists;
  * @create: 2020-11-18 21:48
  **/
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
     ListNode() {}
     ListNode(int val) { this.val = val; }
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
