@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @program: algorithm020
- * @description: 删除排序数组中的重复项
+ * @description: 26.删除排序数组中的重复项
  * {@link:  <a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">}
  * @author: Colin Ting
  * @create: 2020-11-16 22:41
@@ -19,18 +19,16 @@ public class Solution {
     public static int removeDuplicates(int[] nums) {
 
 
-        int i=0;
+        //分别使用变量i和size做双指针
+        int size = 0;
 
-        for(int j=1; j<nums.length; j++){
-
-            if(nums[i]!=nums[j]){
-                i++;
-                nums[i]=nums[j];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[size]) {
+                nums[++size] = nums[i];
             }
-
         }
 
-        return i+1;
+        return size + 1;
 
     }
 
