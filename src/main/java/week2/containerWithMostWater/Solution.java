@@ -2,7 +2,8 @@ package week2.containerWithMostWater;
 
 /**
  * @program: algorithm020
- * @description: 盛最多水的容器
+ * @description: 11.盛最多水的容器
+ * {@link: <a href="https://leetcode-cn.com/problems/container-with-most-water/"/> }
  * @author: Colin Ting
  * @create: 2020-11-24 23:18
  **/

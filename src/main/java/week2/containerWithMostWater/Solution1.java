@@ -2,8 +2,9 @@ package week2.containerWithMostWater;
 
 /**
  * @program: algorithm020
- * @description: 盛最多水的容器，时间更快的写法，加了一些判断，减少了一些无用功
- * （加了些判断相当于多做了些有用功）
+ * @description: 11.盛最多水的容器，时间更快的写法，加了一些判断，减少了一些无用功
+ * （加了些判断相当于多做了些有用功,少做了些无用功）
+ * {@link: <a href="https://leetcode-cn.com/problems/container-with-most-water/"/> }
  * @author: Colin Ting
  * @create: 2020-11-24 23:34
  **/
