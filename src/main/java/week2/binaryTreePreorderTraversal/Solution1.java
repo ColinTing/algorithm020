@@ -17,6 +17,7 @@ public class Solution1 {
 
     /**
      * 递归法
+     * 与 94.二叉树的中序遍历 类似（改下代码的顺序就能实现）
      * @param root
      * @return
      */

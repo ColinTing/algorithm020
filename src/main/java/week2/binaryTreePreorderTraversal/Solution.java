@@ -19,6 +19,7 @@ public class Solution {
 
     /**
      * 迭代法
+     * 与 94.二叉树的中序遍历 类似（改下代码的顺序就能实现）
      */
     public List<Integer> preorderTraversal(TreeNode root) {
 
