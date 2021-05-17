@@ -1,30 +1,34 @@
 package week6.maximalSquare;
 
-
+/**
+ * @program: algorithm020
+ * @description: 221. 最大正方形
+ * {@link: <a href="https://leetcode-cn.com/problems/maximal-square/">}
+ * @author: Colin Ting
+ * @create: 2021-05-17 22:23
+ **/
 public class Solution {
 
-    /**
-     *
-     * 221. 最大正方形
-     * a初始位置在正方形左上角，b初始位置在正方形的右下角
-     * 通过a先赋值b，再通过a判断b正方形是否满足可扩展条件
-     *
-     * @param matrix
-     * @return
-     */
     public int maximalSquare(char[][] matrix) {
-        if (matrix.length == 0) return 0;
-        int m = matrix.length, n = matrix[0].length, result = 0;
-        int[][] b = new int[m+1][n+1];
-        for (int x = 1; x <= m; x++) {
-            for (int y = 1; y <= n; y++) {
-                if (matrix[x-1][y-1] == '1') {
-                    b[x][y] = Math.min(Math.min(b[x][y-1], b[x-1][y-1]), b[x-1][y])+1;
-                    result = Math.max(b[x][y], result);
+        if (matrix.length == 0 || matrix[0].length == 0) {
+            return 0;
+        }
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int[][] dp = new int[m][n];
+        int res = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 || j == 0) {
+                    dp[i][j] = matrix[i][j] - '0';
+                } else if (matrix[i][j] == '1') {
+                    dp[i][j] = Math.min(Math.min(dp[i - 1][j - 1], dp[i][j - 1]),
+                            dp[i - 1][j]) + 1;
                 }
+                res = Math.max(res, dp[i][j]);
             }
         }
-        return result*result;
+        return res * res;
     }
 
 }
