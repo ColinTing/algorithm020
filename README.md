@@ -10,3 +10,5 @@
 * [回溯](Week3/README.md)
 
 * [贪心算法&广度优先搜索&深度优先搜索&二分查找](Week4/README.md)
+
+* [动态规划](Week6/README.md)
