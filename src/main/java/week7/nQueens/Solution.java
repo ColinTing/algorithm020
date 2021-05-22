@@ -5,63 +5,73 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 51. N 皇后
- * 抄的高票回答
- * 与上一题一样的思路，到临界值后开始回溯
- * 只是与上一题添加值的条件不同
- * 这个题目后面会多写，直至记住
- */
+ * @program: algorithm020
+ * @description: 51. N 皇后
+ * {@link: <a href="https://leetcode-cn.com/problems/n-queens/">}
+ * @author: Colin Ting
+ * @create: 2021-05-22 23:27
+ **/
 public class Solution {
 
-
-
     public List<List<String>> solveNQueens(int n) {
-        char[][] board = new char[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                board[i][j] = '.';
+        List<List<String>> res = new ArrayList<>();
+        char[][] queens = new char[n][n];
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                queens[i][j] = '.';
             }
         }
-        List<List<String>> res = new ArrayList<>();
-        dfs(board, 0, res);
+        dfs(0, queens, res);
         return res;
+
     }
 
-    private void dfs(char[][] board, int colIndex, List<List<String>> res) {
-        if (colIndex == board[0].length) {
-            res.add(construct(board));
+    private void dfs(int row, char[][] queens, List<List<String>> res) {
+        int n = queens.length;
+        if (row == n) {
+            res.add(construct(queens));
             return;
         }
+        for (int col = 0; col < n; ++col) {
+            if (isValid(queens, row, col)) {
+                queens[row][col] = 'Q';
+                dfs(row + 1, queens, res);
+                queens[row][col] = '.';
+            }
+        }
+    }
 
-        for (int i = 0; i < board.length; i++) {
-            if (validate(board, i, colIndex)) {
-                board[i][colIndex] = 'Q';
-                dfs(board, colIndex + 1, res);
-                board[i][colIndex] = '.';
+    private boolean isValid(char[][] queens, int row, int col) {
+
+        //检查当前列是否存在皇后
+        for (int i = 0; i < row; ++i) {
+            if (queens[i][col] == 'Q') {
+                return false;
             }
         }
 
+        //检查45度角
+        for (int i = row - 1, j = col + 1; i >= 0 && j < queens.length; i--, j++) {
+            if (queens[i][j] == 'Q') {
+                return false;
+            }
+        }
 
-    }
-
-    private boolean validate(char[][] board, int x, int y) {
-        for (int i = 0; i < board.length; i ++) {
-            for (int j = 0; j < y; j++) {
-                if(board[i][j] == 'Q' && (x + j == y +i || x + y == i + j || x == i)) {
-                    return false;
-                }
+        //检查135度角
+        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
+            if (queens[i][j] == 'Q') {
+                return false;
             }
         }
         return true;
     }
 
-    private List<String> construct(char[][] board) {
-        List<String> res = new LinkedList<>();
-        for (int i = 0; i < board.length; i++) {
-            String s = new String(board[i]);
-            res.add(s);
+    private List<String> construct(char[][] queens) {
+        List<String> queen = new ArrayList<>();
+        for (int i = 0; i < queens.length; i++) {
+            queen.add(new String(queens[i]));
         }
-        return res;
+        return queen;
     }
 
 }

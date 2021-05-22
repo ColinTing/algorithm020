@@ -16,7 +16,7 @@ public class Solution {
      * 1.没有使用for循环
      * 2.k==0时如果直接combs.add(comb)，会出现都是空的数组，必须是combs.add(new ArrayList<>(comb));
      * 3.for循环中需要是i <= n，不能是i < n
-     * 4. helper DPS调用时，最后一个参数只能是k-1，不能时k--，不然k == 0，只会经历一次
+     * 4. helper DFS调用时，最后一个参数只能是k-1，不能时k--，不然k == 0，只会经历一次
      *
      * @param n
      * @param k
