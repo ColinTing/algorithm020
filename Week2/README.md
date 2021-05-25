@@ -13,7 +13,7 @@
 
 时间复杂度O(n) <br>
 空间复杂度O(logN) <br>
-PS：递归空间复杂度：递归深度就是他的空间复杂度的最大值，N叉树平均高度是O(logN) <br>
+Explain：递归空间复杂度：递归深度就是他的空间复杂度的最大值，N叉树平均高度是O(logN) <br>
 
 
 [49.字母异位词分组](../src/main/java/week2/groupAnagrams/Solution.java) <br>

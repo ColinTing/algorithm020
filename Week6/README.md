@@ -78,7 +78,7 @@ word1[i] == word2[j] 时，dp[i][j] = dp[i - 1][j - 1]，因为字符相同，�
 左上dp[i-1][i-j]对应修改操作 <br>
 最后求他们三种操作中的最小值并+1 <br>
 
-PS：(这里j以i为标准，所以左边是增加j-1+1,上边是j-1) <br>
+Explain：(这里j以i为标准，所以左边是增加j-1+1,上边是j-1) <br>
 
 [363. 矩形区域不超过 K 的最大数值和](../src/main/java/week6/maxSumOfRectangleNoLargerThanK/Solution.java) <br>
 
@@ -93,7 +93,7 @@ step表示青蛙上次跳动到这里时用的步数。<br>
 
 对于每块石头，已知跳到这里用了step步，那么就看从该位置跳step-1、step和step+1能不能跳到新的石头，如果可以，在新的石头的value处加入这个步数 <br>
 
-PS：dp[0] = 0:表示第零位上一步跳动到这里用的步数（没有上一步，所以跳动的步数是0）<br>
+Explain：dp[0] = 0:表示第零位上一步跳动到这里用的步数（没有上一步，所以跳动的步数是0）<br>
 
 [410.分割数组的最大值](../src/main/java/week6/splitArrayLargestSum/Solution.java) <br>
 
@@ -115,14 +115,14 @@ dp[i][j] 表示将数组中前j个数字分成i组所能得到的最小的各个
 从而给A留出位置。就相当于在数组的任意一个位置上加上A，数组就被分成左右两个部分了，而这两个部分当然就不能再有A，<br>
 实际上所有不包含A的情况都已经在数组 p_or_l 中计算过了，而分成的子数组的长度又不会大于原数组的长度，所以直接在 p_or_l 中取值就行了，两个子数组的排列个数相乘，然后再把所有分割的情况累加起来就是最终结果啦
 
-PS：p_or_l[0] = p[0] = 1; <br> 
+Explain：p_or_l[0] = p[0] = 1; <br> 
     是因为p_or_l[1] = 2, p[1] = 1；且p[i]= p_or_l[i-1]。倒推得来的
 
 [76.最小覆盖子串](../src/main/java/week6/minimumWindowSubstring/Solution.java) <br>
 
 不像dp的一道题,类似双指针算法 <br>
 
-PS:缩减长度时使用的while循环，只要减去再加上1的值不大于0就可以缩减长度 <br>
+Explain:缩减长度时使用的while循环，只要减去再加上1的值不大于0就可以缩减长度 <br>
 
 [312.戳气球](../src/main/java/week6/burstBalloons/Solution.java) <br>
 
