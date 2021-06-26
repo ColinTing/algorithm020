@@ -5,7 +5,7 @@ import utils.ListNode;
 
 /**
  * @program: algorithm020
- * @description: 21.合并两个有序链表
+ * @description: 21. 合并两个有序链表
  * {@link:  <a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/">}
  * @author: Colin Ting
  * @create: 2020-11-18 21:45

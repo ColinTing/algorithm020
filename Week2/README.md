@@ -41,6 +41,15 @@ Explain：递归空间复杂度：递归深度就是他的空间复杂度的最�
 时间复杂度O(n) <br>
 空间复杂度O(n) <br>
 
+[429.N 叉树的层序遍历](../src/main/java/week2/nAryTreeLevelOrderTraversal/Solution.java) <br>
+
+Explain:
+BFS
+
+[264.丑数 II(最小堆解法)](../src/main/java/week2/uglyNumberIi/Solution.java) <br>
+
+[264.丑数 II(递推解法)](../src/main/java/week2/uglyNumberIi/Solution1.java) <br>
+
 [347.前 K 个高频元素](../src/main/java/week2/topKFrequentElements/Solution.java) <br>
 
 时间复杂度O(n) <br>
